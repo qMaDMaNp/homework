@@ -1,0 +1,859 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Assessment</title>
+
+        <link href="styles.css" rel="stylesheet"/>
+        <link href="base.css" rel="stylesheet"/>
+        <style>
+            #hometest-table td {
+                word-wrap: unset;
+                word-break: unset;
+                white-space: unset
+            }
+        </style>
+        <script src="plugins.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body class="page-body">
+        <script type="text/javascript">
+            var SITEURLS = (function () {
+                return {}
+            })();
+        </script>
+
+        <div class="page-container sidebar-collapsed horizontal-menu">
+            <div class="main-content no-menu" style="background:white">
+                <div class="container">
+                    <div class="mt-4 mb-4">
+                        <button id="btn-bulk-verify" class="btn btn-green mr-1">Verify</button>
+                        <button id="btn-bulk-decline" class="btn btn-red">Decline</button>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-12">
+                            <table id="hometest-table" class="table table-bordered table-striped table-hover dataTable">
+                                <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Status</th>
+                                    <th>Email</th>
+                                    <th>CPM</th>
+                                    <th>Impressions</th>
+                                    <th>Clicks</th>
+                                    <th>Registered Date</th>
+                                    <th>Actions</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>8292</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/1">test1email@gmail.com</a></td>
+                                    <td>$24.5</td>
+                                    <td>12140</td>
+                                    <td>592</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="1" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="1" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4610</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/2">test2email@gmail.com</a></td>
+                                    <td>$46.06</td>
+                                    <td>73714</td>
+                                    <td>909</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="2" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="2" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3922</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/3">test3email@gmail.com</a></td>
+                                    <td>$41.16</td>
+                                    <td>91642</td>
+                                    <td>399</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="3" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="3" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>7591</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/4">test4email@gmail.com</a></td>
+                                    <td>$89.18</td>
+                                    <td>98883</td>
+                                    <td>530</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="4" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="4" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5083</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/5">test5email@gmail.com</a></td>
+                                    <td>$21.56</td>
+                                    <td>56007</td>
+                                    <td>541</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="5" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="5" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>6260</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/6">test6email@gmail.com</a></td>
+                                    <td>$62.72</td>
+                                    <td>82922</td>
+                                    <td>592</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="6" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="6" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1647</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/7">test7email@gmail.com</a></td>
+                                    <td>$82.32</td>
+                                    <td>41498</td>
+                                    <td>715</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="7" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="7" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2840</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/8">test8email@gmail.com</a></td>
+                                    <td>$12.74</td>
+                                    <td>93247</td>
+                                    <td>241</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="8" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="8" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>9401</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/9">test9email@gmail.com</a></td>
+                                    <td>$23.52</td>
+                                    <td>40971</td>
+                                    <td>134</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="9" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="9" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4239</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/10">test10email@gmail.com</a></td>
+                                    <td>$26.46</td>
+                                    <td>85590</td>
+                                    <td>604</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="10" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="10" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1299</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/11">test11email@gmail.com</a></td>
+                                    <td>$12.74</td>
+                                    <td>73455</td>
+                                    <td>603</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="11" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="11" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3938</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/12">test12email@gmail.com</a></td>
+                                    <td>$49.98</td>
+                                    <td>47647</td>
+                                    <td>866</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="12" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="12" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>9441</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/13">test13email@gmail.com</a></td>
+                                    <td>$16.66</td>
+                                    <td>81886</td>
+                                    <td>712</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="13" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="13" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4270</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/14">test14email@gmail.com</a></td>
+                                    <td>$33.32</td>
+                                    <td>16986</td>
+                                    <td>562</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="14" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="14" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>9259</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/15">test15email@gmail.com</a></td>
+                                    <td>$30.38</td>
+                                    <td>98593</td>
+                                    <td>275</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="15" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="15" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5040</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/16">test16email@gmail.com</a></td>
+                                    <td>$23.52</td>
+                                    <td>23266</td>
+                                    <td>174</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="16" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="16" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>6683</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/17">test17email@gmail.com</a></td>
+                                    <td>$18.62</td>
+                                    <td>68765</td>
+                                    <td>647</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="17" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="17" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>7334</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/18">test18email@gmail.com</a></td>
+                                    <td>$59.78</td>
+                                    <td>40246</td>
+                                    <td>339</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="18" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="18" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3553</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/19">test19email@gmail.com</a></td>
+                                    <td>$78.4</td>
+                                    <td>72969</td>
+                                    <td>660</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="19" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="19" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>9490</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/20">test20email@gmail.com</a></td>
+                                    <td>$45.08</td>
+                                    <td>22049</td>
+                                    <td>607</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="20" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="20" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>6039</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/21">test21email@gmail.com</a></td>
+                                    <td>$13.72</td>
+                                    <td>26690</td>
+                                    <td>491</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="21" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="21" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>7341</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/22">test22email@gmail.com</a></td>
+                                    <td>$29.4</td>
+                                    <td>79611</td>
+                                    <td>892</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="22" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="22" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>8748</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/23">test23email@gmail.com</a></td>
+                                    <td>$88.2</td>
+                                    <td>56485</td>
+                                    <td>361</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="23" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="23" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>10008</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/24">test24email@gmail.com</a></td>
+                                    <td>$88.2</td>
+                                    <td>47558</td>
+                                    <td>857</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="24" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="24" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>8660</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/25">test25email@gmail.com</a></td>
+                                    <td>$40.18</td>
+                                    <td>65877</td>
+                                    <td>861</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="25" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="25" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5120</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/26">test26email@gmail.com</a></td>
+                                    <td>$92.12</td>
+                                    <td>21135</td>
+                                    <td>724</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="26" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="26" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3518</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/27">test27email@gmail.com</a></td>
+                                    <td>$41.16</td>
+                                    <td>62150</td>
+                                    <td>404</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="27" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="27" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1729</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/28">test28email@gmail.com</a></td>
+                                    <td>$59.78</td>
+                                    <td>98326</td>
+                                    <td>219</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="28" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="28" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>9578</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/29">test29email@gmail.com</a></td>
+                                    <td>$40.18</td>
+                                    <td>21153</td>
+                                    <td>863</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="29" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="29" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4074</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/30">test30email@gmail.com</a></td>
+                                    <td>$28.42</td>
+                                    <td>73268</td>
+                                    <td>114</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="30" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="30" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>8182</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/31">test31email@gmail.com</a></td>
+                                    <td>$65.66</td>
+                                    <td>35176</td>
+                                    <td>252</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="31" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="31" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3981</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/32">test32email@gmail.com</a></td>
+                                    <td>$68.6</td>
+                                    <td>65771</td>
+                                    <td>770</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="32" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="32" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>7830</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/33">test33email@gmail.com</a></td>
+                                    <td>$81.34</td>
+                                    <td>27776</td>
+                                    <td>501</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="33" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="33" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1287</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/34">test34email@gmail.com</a></td>
+                                    <td>$93.1</td>
+                                    <td>34738</td>
+                                    <td>402</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="34" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="34" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>9845</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/35">test35email@gmail.com</a></td>
+                                    <td>$79.38</td>
+                                    <td>57659</td>
+                                    <td>574</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="35" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="35" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>9236</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/36">test36email@gmail.com</a></td>
+                                    <td>$13.72</td>
+                                    <td>84991</td>
+                                    <td>138</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="36" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="36" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4949</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/37">test37email@gmail.com</a></td>
+                                    <td>$6.86</td>
+                                    <td>51061</td>
+                                    <td>442</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="37" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="37" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>6897</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/38">test38email@gmail.com</a></td>
+                                    <td>$66.64</td>
+                                    <td>33996</td>
+                                    <td>887</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="38" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="38" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>7260</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/39">test39email@gmail.com</a></td>
+                                    <td>$71.54</td>
+                                    <td>11024</td>
+                                    <td>869</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="39" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="39" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>8026</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/40">test40email@gmail.com</a></td>
+                                    <td>$21.56</td>
+                                    <td>81324</td>
+                                    <td>888</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="40" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="40" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>7948</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/41">test41email@gmail.com</a></td>
+                                    <td>$64.68</td>
+                                    <td>24707</td>
+                                    <td>280</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="41" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="41" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>6986</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/42">test42email@gmail.com</a></td>
+                                    <td>$72.52</td>
+                                    <td>33441</td>
+                                    <td>808</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="42" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="42" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4456</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/43">test43email@gmail.com</a></td>
+                                    <td>$52.92</td>
+                                    <td>29785</td>
+                                    <td>349</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="43" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="43" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1944</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/44">test44email@gmail.com</a></td>
+                                    <td>$54.88</td>
+                                    <td>97367</td>
+                                    <td>533</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="44" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="44" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4906</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/45">test45email@gmail.com</a></td>
+                                    <td>$7.84</td>
+                                    <td>39974</td>
+                                    <td>323</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="45" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="45" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>6611</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/46">test46email@gmail.com</a></td>
+                                    <td>$86.24</td>
+                                    <td>66828</td>
+                                    <td>251</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="46" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="46" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3971</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/47">test47email@gmail.com</a></td>
+                                    <td>$21.56</td>
+                                    <td>75633</td>
+                                    <td>844</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="47" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="47" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4855</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/48">test48email@gmail.com</a></td>
+                                    <td>$38.22</td>
+                                    <td>47194</td>
+                                    <td>327</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="48" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="48" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>9624</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/49">test49email@gmail.com</a></td>
+                                    <td>$28.42</td>
+                                    <td>79393</td>
+                                    <td>700</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="49" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="49" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1406</td>
+                                    <td><div class="badge badge-success badge-roundless col-md-12">Active</div></td>
+                                    <td><a href="/admin/users/50">test50email@gmail.com</a></td>
+                                    <td>$97.02</td>
+                                    <td>85710</td>
+                                    <td>645</td>
+                                    <td>November 1, 2022</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-xs">
+                                            <button type="button" class="btn btn-success verifyActions" data-user-id="50" data-action="verify_user">Verify</button>
+                                            <button type="button" class="btn btn-danger verifyActions" data-user-id="50" data-action="deny_user">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                let origin = 'https://myserver.com';
+                let routes = {
+                    post: {
+                        verify: '/user/verify',
+                        decline: '/user/decline'
+                    }
+                }
+
+                let table = $('#hometest-table').DataTable({
+                    scrollX: true
+                });
+
+                $('#hometest-table tbody').on('click', 'tr', function () {
+                    $(this).toggleClass('active');
+                });
+
+                //verify user
+                $('#btn-bulk-verify').click(() => {setUserStatus('verify')});
+
+                //decline user
+                $('#btn-bulk-decline').click(() => {setUserStatus('decline')});
+
+                //@action verify | decline
+                function setUserStatus(action) {
+                    if (!action) return;
+                    let rows = table.rows('.active').data();
+
+                    if (!rows.length) return;
+
+                    let userIds = rows.map(x => x[0]);
+                    let url = origin + routes.post[action];
+
+                    $.ajax({
+                        type: "POST",
+                        url: url,
+                        data: { 'ids[]': userIds.toArray() },
+                        dataType: 'json'
+                    })
+                }
+            })
+        </script>
+    </body>
+</html>
